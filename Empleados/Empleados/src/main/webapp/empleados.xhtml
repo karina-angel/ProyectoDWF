@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: camce
+  Date: 3/22/2024
+  Time: 12:11 AM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Sección de empleados</title>
+    <h:outputStylesheet name="css/styles.css"/>
+</h:head>
+
+<h:body>
+    <h2>Sección de Empleados</h2>
+
+    <!-- Formulario para ingresar un nuevo cliente -->
+    <h:form id="nuevoClienteForm">
+    <h3>Ingresar Nuevo Cliente</h3>
+        <h:outputLabel for="nombre" value="Nombre:" />
+        <h:inputText id="nombre" value="#{clienteController.nombre}" required="true" />
+
+        <h:outputLabel for="apellido" value="Apellido:" />
+        <h:inputText id="apellido" value="#{clienteController.apellido}" required="true" />
+        <h:outputLabel for="telefono" value="Teléfono:" />
+        <h:inputText id="telefono" value="#{clienteController.telefono}" />
+
+        <h:outputLabel for="direccion" value="Dirección:" />
+        <h:inputText id="direccion" value="#{clienteController.direccion}" />
+
+        <h:commandButton value="Guardar Cliente" action="#{clienteController.guardarCliente}" />
+    </h:form>
+
+    <!-- Lista de clientes -->
+    <h3>Listado de Clientes</h3>
+    <h:dataTable id="listaClientes" var="cliente" value="#{clienteController.clientes}">
+        <h:column headerText="Nombre">
+            <h:outputText value="#{cliente.nombre}" />
+        </h:column>
+        <h:column headerText="Apellido">
+            <h:outputText value="#{cliente.apellido}" />
+        </h:column>
+        <h:column headerText="Teléfono">
+            <h:outputText value="#{cliente.telefono}" />
+        </h:column>
+        <h:column headerText="Dirección">
+            <h:outputText value="#{cliente.direccion}" />
+        </h:column>
+    </h:dataTable>
+</h:body>
+
+</html>
