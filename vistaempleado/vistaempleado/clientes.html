@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Clientes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="my-4">Gestión de Clientes</h1>
+
+    <!-- Formulario para ingresar un nuevo cliente -->
+    <form id="clienteForm" class="mb-4">
+        <h2>Ingresar Nuevo Cliente</h2>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="DUI">DUI:</label>
+            <input type="text" id="DUI" name="DUI" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="correo">Correo:</label>
+            <input type="text" id="correo" name="correo" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar Cliente</button>
+    </form>
+
+    <!-- Lista de clientes -->
+    <div id="listaClientes" class="mb-4">
+        <h2>Lista</h2>
