@@ -1,0 +1,85 @@
+.container {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    width: calc(33.33% - 20px); /* Ancho de cada categoría considerando el margen */
+}
+
+li:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Dividir en tres columnas */
+ul {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    ul {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    ul {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+
+    /* Estilos para el selectOneMenu */
+    .container select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f8f8f8;
+        width: 300px; /* Ajusta el ancho según sea necesario */
+    }
+
+    /* Estilos para la tabla */
+    .container table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .container th, .container td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .container th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    /* Estilos para la tabla cuando está vacía */
+    .container table:empty::after {
+        content: "No hay productos disponibles.";
+        display: block;
+        padding: 8px;
+        text-align: center;
+        color: #999;
+    }
+}

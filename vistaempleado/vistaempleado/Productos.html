@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Ventas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="my-4">Generar Ventas</h1>
+
+    <!-- Formulario para buscar productos -->
+    <form id="buscarProductosForm" class="mb-4">
+        <h2>Buscar Productos</h2>
+        <div class="form-group">
+            <label for="nombreProducto">Nombre del Producto:</label>
+            <input type="text" id="nombreProducto" name="nombreProducto" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+
+    <!-- Lista de productos encontrados -->
+    <div id="listaProductos" class="mb-4">
+        <h3>Resultados de la Búsqueda</h3>
+        <ul class="list-group">
+            <li class="list-group-item">Producto 1</li>
+            <li class="list-group-item">Producto 2</li>
+            <li class="list-group-item">Producto 3</li>
+            <!-- Aquí se mostrarán dinámicamente los productos encontrados -->
+        </ul>
+    </div>
+
+    <!-- Formulario para seleccionar productos -->
+    <form id="seleccionarProductosForm" class="mb-4">
+        <h2>Seleccionar Productos</h2>
+        <div class="form-group">
+            <label for="productoSeleccionado">Producto:</label>
+            <select id="productoSeleccionado" name="productoSeleccionado" class="form-control" required>
+                <option value="producto1">Producto 1</option>
+                <option value="producto2">Producto 2</option>
+                <option value="producto3">Producto 3</option>
+                <!-- Aquí se agregarán dinámicamente los productos disponibles -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar a la Venta</button>
+    </form>
+
+    <!-- Resumen de la venta -->
+    <div>
