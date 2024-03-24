@@ -46,4 +46,40 @@ ul {
         -webkit-column-count: 2;
         column-count: 2;
     }
+
+    /* Estilos para el selectOneMenu */
+    .container select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f8f8f8;
+        width: 300px; /* Ajusta el ancho según sea necesario */
+    }
+
+    /* Estilos para la tabla */
+    .container table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .container th, .container td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .container th {
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    /* Estilos para la tabla cuando está vacía */
+    .container table:empty::after {
+        content: "No hay productos disponibles.";
+        display: block;
+        padding: 8px;
+        text-align: center;
+        color: #999;
+    }
 }

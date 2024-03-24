@@ -9,10 +9,7 @@
 <h:head>
     <title>Categorías</title>
     <h:outputStylesheet name="css/bootstrap.min.css"/>
-    <h:outputStylesheet name="css/alertify.core.css"/>
-    <h:outputStylesheet name="css/alertify.default.css"/>
     <h:outputStylesheet name="css/style.css"/>
-    <h:outputScript name="js/alertify.js"/>
 </h:head>
 
 <h:body>
@@ -21,8 +18,15 @@
         <h:form>
             <h:selectOneMenu value="#{categoriaSeleccionada}">
                 <f:selectItem itemLabel="Seleccionar Categoría" itemValue="" />
-                <f:selectItem itemLabel="Electrónica" itemValue="Electrónica" />
-                <f:selectItem itemLabel="Ropa" itemValue="Ropa" />
+                <f:selectItem itemLabel="Productos agrícolas y de jardín" itemValue="jardín" />
+                <f:selectItem itemLabel="Construcción" itemValue="Ropa" />
+                <f:selectItem itemLabel="Eléctrico" itemValue="Ropa" />
+                <f:selectItem itemLabel="Ferretería" itemValue="Ropa" />
+                <f:selectItem itemLabel="Fontanería" itemValue="Ropa" />
+                <f:selectItem itemLabel="Herramientas" itemValue="Ropa" />
+                <f:selectItem itemLabel="Hogar" itemValue="Ropa" />
+                <f:selectItem itemLabel="Pinturas" itemValue="Ropa" />
+                <f:selectItem itemLabel="Seguridad ocupacional" itemValue="Ropa" />
                 <f:ajax render="productos" />
             </h:selectOneMenu>
         </h:form>
